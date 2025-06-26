@@ -65,10 +65,7 @@ shopwhirl/
 ⚙️ How to Run
 Clone this repository:
 
-bash
-Copy
-Edit
-git clone https://github.com/shwetachandra/shopwhirl.git
+git clone  https://shwetachandra19.github.io/Shopwhirl/
 cd shopwhirl
 Open index.html in your browser
 
