@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopWhirl</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<!-- Firebase App (the core Firebase SDK) -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+<!-- Firebase Auth -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+
+<body>
+    <a href="index.html"></a>
+    <!--Navbar-->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="logo.png" alt="ShopWhirl logo" class="nav-logo">
+        </div>
+    
+    <ul class="nav-links">
+        <li><a href="home.html" >Home</a></li>
+        <li><a href="beauty.html" >Beauty</a></li>
+        <li><a href="men.html" >Men</a></li>
+        <li><a href="women.html" >Women</a></li>
+        <li><a href="kids.html">Kids</a></li>
+         <li><a href="floors.html">Floors</a></li>
+         <li><a href="shops.html">Shops</a></li>
+    </ul>
+
+    <div class="nav-right">
+        <a href="profile.html"><i class='bx bx-user'></i></a>
+        <a href="wishlist.html"><i class='bx bxs-heart'></i></a>
+        <a href="cart.html"><i class='bx bxs-cart'></i></a>
+    </div>
+
+
+    </nav>
+     <!--Banner container-->
+     <div onclick="openBannerPage()">
+     <a class="custom-banner" href="beauty.html?category=Brushes">
+        <img src="banner/main banner.png" alt="main-banner" class="banner-image">
+     </a>
+     </div>
+
+    <section class="about-shopwhirl">
+        <div class="about-container">
+         <h2>What is ShopWhirl?</h2>
+          <p>
+           🛍️ ShopWhirl is your ultimate online super mall experience! Browse across <strong>fashion</strong>, <strong>gadgets</strong>, <strong>beauty</strong>, and more — all under one elegant virtual roof. ✨
+          </p>
+          <p>
+           🏬 Explore floors, 💖 discover exclusive offers, 🔍 compare products, and 🛒 enjoy seamless shopping — ShopWhirl brings the mall magic online, with elegance in every click. 🌐💫
+          </p>
+        </div>
+    </section>
+
+
+     <!--Fashion Deals Section-->
+     <section class="product-section" id="fashion">
+        <h2 class="section-title">Trendy Styles You’ll Love</h2>
+            <!--product 1 to 4 (Always Visible)-->
+            <div class="products-row">
+                 <div class="product-card">
+                <img src="products/fashion-product1.jpg" alt="Women's ethnic wear">
+                <h3> Libas Kurta Set</h3>
+                <p>₹2200</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+                 </div>
+                 <div class="product-card">
+                <img src="products/fashion-product2.jpg" alt="Women's ethnic wear" >
+                <h3> GorSiki Kurta set </h3>
+                <p>₹1850</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+                 </div>
+                <div class="product-card">
+                <img src="products/fashion-product3.jpg" alt="Women's ethnic wear" >
+                <h3> Embellished Saree </h3>
+                <p>₹2599</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+                </div>
+                 <div class="product-card">
+                <img src="products/fashion-product4.jpg" alt="Women's ethnic wear" >
+                <h3>  Banarasi Saree </h3>
+                <p>₹4999</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+             </div>
+            </div>
+    </section>        
+         
+            <!--Fashion Sales Banner-->
+            <section class="horizontal-banner">
+                <a href="beauty.html?category=Makeup">
+                <img src="banner/Salesbanner.jpg" alt="Fashion Sale Banner" class="sale-banner">
+                </a>
+            </section>
+<!--Fashion And Gadget Sales banner-->
+<section class="banner-row">
+  <div class="vertical-banner1">
+    <a href="women.html">
+    <img src="banner/Salesbanner2.png" alt="Vertical Fashion Sale">
+    </a>
+  </div>
+  <div class="vertical-banner2">
+    <a href="beauty.html?category=Skincare">
+    <img src="banner/Salesbanner4.png" alt="Vertical Fashion Sale">
+    </a>
+  </div>
+  <div class="vertical-banner3">
+    <a href="kids.html">
+    <img src="banner/Salesbanner3.png" alt="Vertical Gadget Sale">
+    </a>
+  </div>
+</section>
+
+
+<!--Beauty & Personal Care-->
+<section class="product-section" id="beauty">
+        <h2 class="section-title">Beauty Picks for You</h2>
+         <!--product 1 to 4 (Always Visible)-->
+            <div class="products-row">
+                 <div class="product-card">
+                <img src="products/beauty1.jpg" alt="Beauty & Personal Care">
+                <h3> AHA+BHA Serum</h3>
+                <p>₹2249</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+                 </div>
+                 <div class="product-card">
+                <img src="products/beauty2.jpg" alt="Beauty & Personal Care" >
+                <h3>Lakme Blish Stick </h3>
+                <p>₹1499</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+                </div>
+                <div class="product-card">
+                <img src="products/beauty3.jpg" alt="Beauty & Personal Care" >
+                <h3> Summer Fridays Lip Balm </h3>
+                <p>₹2499</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+                </div>
+                 <div class="product-card">
+                <img src="products/beauty4.jpg" alt="Beauty & Personal Care" >
+                <h3>  Creme Blush  </h3>
+                <p>₹1899</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+             </div>
+            </div>
+    </section>        
+            <footer class="footer">
+             <p>&copy; 2025 ShopWhirl. Built with ❤️ by Shweta Chandra</p>
+            </footer>
+
+
+
+   <!-- Firebase Config & Init -->
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyBIeVzgHV3VrCFrAe6orJtGucKCWPH-h5I",
+    authDomain: "shopwhirl.firebaseapp.com",
+    projectId: "shopwhirl",
+    storageBucket: "shopwhirl.firebasestorage.app",
+    messagingSenderId: "43711346318",
+    appId: "1:43711346318:web:103ebbc6fb5ac22f09bbdf"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<script src="script.js" ></script>
+<script src="wishlist.js"></script>
+</body>
+ 
+</html>

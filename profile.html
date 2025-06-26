@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile - ShopWhirl</title>
+  <link rel="stylesheet" href="style.css" />
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+ 
+</head>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+<!-- Firebase Auth -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<body>
+
+   <!--Navbar-->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="logo.png" alt="ShopWhirl logo" class="nav-logo">
+        </div>
+    
+    <ul class="nav-links">
+        <li><a href="home.html" >Home</a></li>
+        <li><a href="beauty.html" >Beauty</a></li>
+        <li><a href="men.html" >Men</a></li>
+        <li><a href="women.html" >Women</a></li>
+        <li><a href="kids.html">Kids</a></li>
+         <li><a href="floors.html">Floors</a></li>
+         <li><a href="shops.html">Shops</a></li>
+    </ul>
+
+    <div class="nav-right">
+        <a href="profile.html"><i class='bx bx-user'></i></a>
+        <a href="wishlist.html"><i class='bx bxs-heart'></i></a>
+        <a href="cart.html"><i class='bx bxs-cart'></i></a>
+    </div>
+    </nav>
+
+ <section class="profile-layout">
+  <!-- Left: Profile Sidebar -->
+  <div class="profile-left">
+    <img src="user-default.png" class="profile-pic" />
+    <h2 id="profileName">Your Name</h2>
+    <p id="profileEmail">your@email.com</p>
+    <button class="edit-btn" id="editProfileBtn">Edit Profile</button>
+    <a href="cart.html">🛍️ My Cart</a>
+    <a href="wishlist.html">❤️ Wishlist</a>
+    <a href="#" class="logout">🚪 Log Out</a>
+  </div>
+
+  <!-- Right: Welcome or Edit -->
+  <div class="profile-right" id="profileRight">
+    <div class="welcome-box" id="welcomeBox">
+      <h1 id="welcomeMessage">👋 Welcome back!</h1>
+      <p>We’re glad to see you.</p>
+    </div>
+
+    <div class="edit-box hidden" id="editBox">
+      <h2>Edit Your Profile</h2>
+      <input type="text" placeholder="Enter new name" id="editName" />
+      <input type="email" placeholder="Enter new email" id="editEmail" /><br>
+      <button class="save-btn" id="saveChangesBtn">Save Changes</button>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <p>&copy; 2025 ShopWhirl. Built with ❤️ by Shweta Chandra</p>
+</footer>
+
+    <script type="module" src="profile.js" ></script>
+</body>
+</html>

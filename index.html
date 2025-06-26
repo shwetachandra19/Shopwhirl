@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopWhirl Login</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+ 
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ed5784, #f88ca4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+    /* Login Section */
+ .login-container {
+      
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .login-box {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding:40px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 10px 40px rgba(236, 99, 156, 0.3);
+      animation: slideUp 1s ease 1.5s forwards;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .login-box:hover {
+      box-shadow: 0 12px 50px rgba(84, 25, 45, 0.5);
+    }
+
+    .logo-wrapper {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo-wrapper img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+
+    .input-box {
+      position: relative;
+      margin: 12px 0;
+    }
+
+    .input-box i {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .input-box input {
+      width: 85%;
+      padding: 12px 12px 12px 40px;
+      border: none;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+      font-size: 16px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .input-box input::placeholder {
+      color: #fff;
+    }
+
+    .input-box input:hover,
+    .input-box input:focus {
+      background-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    }
+
+    .remember-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      margin-top: 10px;
+      color: white;
+    }
+
+    .remember-row label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .remember-row input[type="checkbox"] {
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      background: white;
+      border-radius: 4px;
+      position: relative;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .remember-row input[type="checkbox"]:checked::before {
+      content: "✔";
+      color: #ff5faf;
+      position: absolute;
+      font-size: 12px;
+      top: -1px;
+      left: 2px;
+    }
+
+    .remember-row a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    .remember-row a:hover {
+      text-decoration: underline;
+    }
+
+    .login-btn,
+    .guest-btn {
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+      font-weight: bold;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .login-btn {
+      background-color: #ffffff;
+      color: #fc4d8d;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+    }
+
+    .login-btn:hover {
+      background-color: #ffd4df;
+      box-shadow: 0 8px 20px rgba(223, 80, 145, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .guest-btn {
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    .guest-btn:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-color: #ffe2d4;
+      box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+      transform: scale(1.02);
+    }
+
+    .guest-btn i {
+      margin-right: 8px;
+      font-size: 18px;
+      vertical-align: middle;
+    }
+
+    .sign-up{
+        margin-top: 2rem;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+    }
+
+    .sign-up a{
+        text-decoration: none;
+        color: rgb(139, 10, 49);
+        font-weight: 600;
+    }
+
+    .sign-up a:hover{
+        text-decoration: underline;
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+/* Toast */
+.toast {
+  visibility: hidden;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  z-index: 999;
+}
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+  </style>
+</head>
+<body>
+
+<!-- Splash screen -->
+<div class="splash-screen">
+  <img src="logo.png" alt="ShopWhirl logo" class="splash-logo">
+  <div class="splash-slogan">Spin into style.</div>
+</div>
+
+ <!-- Login Page -->
+<div class="login-container">
+  <div class="login-box">
+    <div class="logo-wrapper" style="text-align: center; margin-bottom: 20px;">
+      <img src="logo.png" alt="ShopWhirl Logo" width="100" />
+    </div>
+
+    <form id="login-form">
+      <!-- Name field (only for sign up) -->
+      <div class="input-box" id="nameField" style="display: none;">
+        <i class='bx bx-user'></i>
+        <input type="text" id="name" placeholder="Full Name" />
+      </div>
+
+      <div class="input-box">
+        <i class='bx bx-envelope'></i>
+        <input type="email" id="email" placeholder="Email" required />
+      </div>
+      <div class="input-box">
+        <i class='bx bx-lock-alt'></i>
+        <input type="password" id="password" placeholder="Password" required />
+      </div>
+
+      <div class="remember-row">
+        <label><input type="checkbox" /> Remember me</label>
+        <a href="#">Forgot Password?</a>
+      </div>
+
+      <button type="submit" class="login-btn" id="submitBtn">Login</button>
+      <button type="button" class="guest-btn" id="guestBtn"><i class='bx bx-user-circle'></i> Continue as Guest</button>
+
+      <div class="sign-up">
+        <p id="toggleText">Don't have an account? <a onclick="toggleForm()">Sign up</a></p>
+      </div>
+
+      <div id="toast" class="toast">Toast message</div>
+    </form>
+  </div>
+</div>
+
+<!-- Firebase Script -->
+<script>
+  // ✅ Splash Screen Hide Logic
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.querySelector('.splash-screen').style.display = 'none';
+    document.querySelector('.main-content').style.display = 'block';
+  }, 2000); // Adjust timing if needed
+});
+  const firebaseConfig = {
+    apiKey: "AIzaSyBIeVzgHV3VrCFrAe6orJtGucKCWPH-h5I",
+    authDomain: "shopwhirl.firebaseapp.com",
+    projectId: "shopwhirl",
+    storageBucket: "shopwhirl.appspot.com",
+    messagingSenderId: "43711346318",
+    appId: "1:43711346318:web:103ebbc6fb5ac22f09bbdf"
+  };
+
+  // ✅ Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+
+  let isLoginMode = true;
+
+  function toggleForm() {
+    isLoginMode = !isLoginMode;
+
+    const nameField = document.getElementById("nameField");
+    const submitBtn = document.getElementById("submitBtn");
+    const toggleText = document.getElementById("toggleText");
+
+    if (isLoginMode) {
+      nameField.style.display = "none";
+      submitBtn.textContent = "Login";
+      toggleText.innerHTML = `Don't have an account? <a onclick="toggleForm()">Sign up</a>`;
+    } else {
+      nameField.style.display = "block";
+      submitBtn.textContent = "Sign Up";
+      toggleText.innerHTML = `Already have an account? <a onclick="toggleForm()">Login</a>`;
+    }
+  }
+
+ document.getElementById("login-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+  const name = document.getElementById("name")?.value.trim(); // name is optional for login
+
+  if (isLoginMode) {
+    // 🔐 Login
+    auth.signInWithEmailAndPassword(email, password)
+      .then(() => {
+        showToast("Login successful!", "success");
+        setTimeout(() => window.location.href = "home.html", 1500);
+      })
+      .catch(err => showToast(err.message, "error"));
+  } else {
+    // 🆕 Sign Up
+    if (!name) {
+      showToast("Please enter your name", "error");
+      return;
+    }
+
+    auth.createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        return user.updateProfile({ displayName: name });
+      })
+      .then(() => {
+        showToast("Account created with name!", "success");
+        setTimeout(() => window.location.href = "home.html", 1500);
+      })
+      .catch(err => showToast(err.message, "error"));
+  }
+});
+
+
+
+  // ✅ Guest Login
+ // ✅ Guest Login
+document.querySelector(".guest-btn").addEventListener("click", function () {
+   auth.signOut().then(() => { // 🔒 force sign out first
+    auth.signInAnonymously()
+      .then(() => {
+        showToast("Logged in as Guest", "success");
+        setTimeout(() => window.location.href = "home.html", 1000);
+      })
+      .catch(error => {
+        showToast(error.message, "error");
+      });
+  });
+});
+
+  // ✅ Toast Message
+  function showToast(message, type = "success") {
+    const toast = document.getElementById("toast");
+    toast.textContent = message;
+    toast.style.backgroundColor = type === "error" ? "#e74c3c" : "#4BB543";
+    toast.classList.add("show");
+    setTimeout(() => toast.classList.remove("show"), 3000);
+  }
+
+  </script>
+
+</body>
+</html>

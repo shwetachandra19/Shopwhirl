@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🛒 Your Cart - ShopWhirl</title>
+  <link rel="stylesheet" href="style.css" />
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<body>
+
+     <!--Navbar-->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="logo.png" alt="ShopWhirl logo" class="nav-logo">
+        </div>
+    
+    <ul class="nav-links">
+        <li><a href="home.html" >Home</a></li>
+        <li><a href="beauty.html" >Beauty</a></li>
+        <li><a href="men.html" >Men</a></li>
+        <li><a href="women.html" >Women</a></li>
+        <li><a href="kids.html">Kids</a></li>
+         <li><a href="floors.html">Floors</a></li>
+         <li><a href="shops.html">Shops</a></li>
+    </ul>
+
+    <div class="nav-right">
+        <a href="profile.html"><i class='bx bx-user'></i></a>
+        <a href="wishlist.html"><i class='bx bxs-heart'></i></a>
+        <a href="cart.html"><i class='bx bxs-cart'></i></a>
+    </div>
+
+
+    </nav>
+
+  <h1 class="cart-heading">🛒 Your Shopping Cart</h1>
+
+  <div class="cart-container" id="cartContainer">
+    <!-- Cart items will be loaded here -->
+  </div>
+
+  <div class="checkout-section">
+     <div id="cartTotal" class="total-section"></div>
+    <button class="checkout-btn">Proceed to Checkout</button>
+  </div>
+
+  <!-- Modal Popup -->
+<div class="checkout-modal hidden" id="checkoutModal">
+  <div class="checkout-message">
+    <p>🎉 Thank you so much for checking out my website project! <br> I hope you liked it. 💖</p>
+    <button id="closeModalBtn">Close</button>
+  </div>
+</div>
+<footer class="footer">
+  <p>&copy; 2025 ShopWhirl. Built with ❤️ by Shweta Chandra</p>
+</footer>
+
+
+  <script src="cart.js"></script>
+</body>
+</html>

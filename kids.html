@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopWhirl-Kid's Fashion</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<body>
+    <!--Navbar-->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="logo.png" alt="ShopWhirl logo" class="nav-logo">
+        </div>
+    
+    <ul class="nav-links">
+        <li><a href="home.html" >Home</a></li>
+        <li><a href="beauty.html" >Beauty</a></li>
+        <li><a href="men.html" >Men</a></li>
+        <li><a href="women.html" >Women</a></li>
+        <li><a href="kids.html">Kids</a></li>
+         <li><a href="floors.html">Floors</a></li>
+         <li><a href="shops.html">Shops</a></li>
+    </ul>
+
+    <div class="nav-right">
+        <a href="profile.html"><i class='bx bx-user'></i></a>
+        <a href="wishlist.html"><i class='bx bxs-heart'></i></a>
+        <a href="cart.html"><i class='bx bxs-cart'></i></a>
+    </div>
+
+
+    </nav>
+     <!--Hero Section-->
+    <section class="hero-women">
+           <h1>Adorable Styles for Your Little Stars 👶✨</h1>
+         <p>From playdates to party-ready - we've got it all!</p>  
+    </section>
+   
+     <!--Filter and Sort Bar-->
+    <div class="filter-sort-wrapper">
+        <div class="filter-bar">
+            <button class="filter-btn">All</button>
+            <button class="filter-btn">Boys</button>
+            <button class="filter-btn">Girls</button>
+            <button class="filter-btn">Co-ords</button>
+            <button class="filter-btn">Dresses</button>
+            <button class="filter-btn">Shirts</button>
+            <button class="filter-btn">Tops</button>
+            <button class="filter-btn">Jumpsuits</button>
+            <button class="filter-btn">Ethnic</button>
+            <button class="filter-btn">Sweater</button>
+            <button class="filter-btn">Night-Suits</button>
+        </div>
+        <div class="sort-bar">
+            <label for="sort">Sort by:</label>
+            <select class="sort-select">
+                <option value="default">Default</option>
+                <option value="low-high">Price:Low to High</option>
+                <option value="high-low">Price:High to Low</option>
+            </select>
+        </div>
+    </div>
+     <section class="product-section" id="Kidswear">
+        <h2 class="section-title">Kid's Fashion</h2>
+    <div class="fashion-grid">
+            <div class="fashion-card" data-category="Boys Co-ords" data-price="790">
+                <img src="kid-products/product1.jpeg" alt="kid's wear">
+                <h3  class="product-name"> Black Co-ords Set</h3>
+                <p class="product-price">₹790</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Ethnic" data-price="1300">
+                <img src="kid-products/product2.jpeg" alt="kid's wear">
+                <h3  class="product-name">Lavender Lehnga</h3>
+                <p class="product-price">₹1300</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+             </div>
+              <div class="fashion-card" data-category="Boys Co-ords" data-price="899">
+                <img src="kid-products/product3.jpeg" alt="kid's wear">
+                <h3  class="product-name">Winter Co-ords Set</h3>
+                <p class="product-price">₹899</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="1599">
+                <img src="kid-products/product4.jpeg" alt="kid's wear">
+                <h3  class="product-name">Half-sleeves Midi-Dress</h3>
+                <p class="product-price">₹790</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Ethnic" data-price="599">
+                <img src="kid-products/product5.jpeg" alt="kid's wear">
+                <h3  class="product-name">Kurti & Sharara Set</h3>
+                <p class="product-price">₹599</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Boys Shirts" data-price="499">
+                <img src="kid-products/product6.jpeg" alt="kid's wear">
+                <h3  class="product-name">Light Blue shirt</h3>
+                <p class="product-price">₹499</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Co-ords" data-price="899">
+                <img src="kid-products/product7.jpeg" alt="kid's wear">
+                <h3  class="product-name">Printed Co-ords Set</h3>
+                <p class="product-price">₹899</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="850">
+                <img src="kid-products/product8.jpeg" alt="kid's wear">
+                <h3  class="product-name">Green Maxi-Dress</h3>
+                <p class="product-price">₹850</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Tops" data-price="1599">
+                <img src="kid-products/product9.jpeg" alt="kid's wear">
+                <h3  class="product-name">Blue & white Stripped cardigan</h3>
+                <p class="product-price">₹1599</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Boys Shirts" data-price="359">
+                <img src="kid-products/product10.jpeg" alt="kid's wear">
+                <h3  class="product-name">Black Checked Shirt</h3>
+                <p class="product-price">₹359</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Jumpsuits" data-price="1199">
+                <img src="kid-products/product11.jpeg" alt="kid's wear">
+                <h3  class="product-name">Jumpsuit With White Jacket</h3>
+                <p class="product-price">₹1199</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Co-ords" data-price="550">
+                <img src="kid-products/product12.jpeg" alt="kid's wear">
+                <h3  class="product-name">Pink & White Co-ords Set</h3>
+                <p class="product-price">₹550</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Ethnic" data-price="1499">
+                <img src="kid-products/product13.jpeg" alt="kid's wear">
+                <h3  class="product-name">Ethnic Kurta Set</h3>
+                <p class="product-price">₹1499</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Boys Co-ords" data-price="699">
+                <img src="kid-products/product14.jpeg" alt="kid's wear">
+                <h3  class="product-name">White T-Shirt & Blue Shorts</h3>
+                <p class="product-price">₹699</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Top" data-price="1200">
+                <img src="kid-products/product15.jpeg" alt="kid's wear">
+                <h3  class="product-name">Black & White Bow Top</h3>
+                <p class="product-price">₹1200</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Boys Ethnic" data-price="999">
+                <img src="kid-products/product16.jpeg" alt="kid's wear">
+                <h3  class="product-name">Ethnic Blue Suit</h3>
+                <p class="product-price">₹999</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="890">
+                <img src="kid-products/product17.jpeg" alt="kid's wear">
+                <h3  class="product-name">Turtle Neck Printed Midi-Dress</h3>
+                <p class="product-price">₹890</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="450">
+                <img src="kid-products/product18.jpeg" alt="kid's wear">
+                <h3  class="product-name">Blue Net Midi-Dress</h3>
+                <p class="product-price">₹450</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Boys Co-ords" data-price="1599">
+                <img src="kid-products/product19.jpeg" alt="kid's wear">
+                <h3  class="product-name">Winter Co-ords Set</h3>
+                <p class="product-price">₹790</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Boys Night-Suits" data-price="499">
+                <img src="kid-products/product20.jpeg" alt="kid's wear">
+                <h3  class="product-name">Mickey Printed Night suit</h3>
+                <p class="product-price">₹499</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="1500">
+                <img src="kid-products/fashion-product9.jpg" alt="kid's wear">
+                <h3  class="product-name">Yellow  Gown</h3>
+                <p class="product-price">₹1500</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Boys Co-ords" data-price="1250">
+                <img src="kid-products/product21.jpeg" alt="kid's wear">
+                <h3  class="product-name">Waist Coat & Pants Set</h3>
+                <p class="product-price">₹1250</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="750">
+                <img src="kid-products/product22.jpeg" alt="kid's wear">
+                <h3  class="product-name">Bell Sleeves Red Dress</h3>
+                <p class="product-price">₹750</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Boys Shirts" data-price="459">
+                <img src="kid-products/product23.jpeg" alt="kid's wear">
+                <h3  class="product-name">Black Oversized T-shirt</h3>
+                <p class="product-price">₹459</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Boys Jumpsuits" data-price="399">
+                <img src="kid-products/product24.jpeg" alt="kid's wear">
+                <h3  class="product-name">Denim Jumpsuit</h3>
+                <p class="product-price">₹399</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Night-Suits" data-price="700">
+                <img src="kid-products/product25.jpeg" alt="kid's wear">
+                <h3  class="product-name">Pink Night suit</h3>
+                <p class="product-price">₹700</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Boys Co-ords" data-price="1299">
+                <img src="kid-products/product26.jpeg" alt="kid's wear">
+                <h3  class="product-name">Waist Coat & Pants Set</h3>
+                <p class="product-price">₹1299</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+            <div class="fashion-card" data-category="Boys Co-ords" data-price="999">
+                <img src="kid-products/product27.jpeg" alt="kid's wear">
+                <h3  class="product-name">Co-ords Set</h3>
+                <p class="product-price">₹999</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+            <div class="fashion-card" data-category="Boys Co-ords" data-price="599">
+                <img src="kid-products/product28.jpeg" alt="kid's wear">
+                <h3  class="product-name">Printed Co-ords Set</h3>
+                <p class="product-price">₹599</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+            <div class="fashion-card" data-category="Boys Sweater" data-price="550">
+                <img src="kid-products/product29.jpeg" alt="kid's wear">
+                <h3  class="product-name">Varsity Jacket</h3>
+                <p class="product-price">₹550</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+            <div class="fashion-card" data-category="Girls Ethnic" data-price="799">
+                <img src="kid-products/product30.jpeg" alt="kid's wear">
+                <h3  class="product-name">GorSiki Kurta Set</h3>
+                <p class="product-price">₹799</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+            <div class="fashion-card" data-category="Girls Tops" data-price="399">
+                <img src="kid-products/product31.jpeg" alt="kid's wear">
+                <h3  class="product-name">Blue Peplum Top</h3>
+                <p class="product-price">₹399</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+            <div class="fashion-card" data-category="Boys Co-ords" data-price="1350">
+                <img src="kid-products/product32.jpeg" alt="kid's wear">
+                <h3  class="product-name">Waist Coat & Pants Set</h3>
+                <p class="product-price">₹1350</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+            <div class="fashion-card" data-category="Girls Top" data-price="599">
+                <img src="kid-products/product33.jpeg" alt="kid's wear">
+                <h3  class="product-name">Pink Turtle Neck Top</h3>
+                <p class="product-price">₹599</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+            <div class="fashion-card" data-category="Girls Ethnic" data-price="800">
+                <img src="kid-products/product34.jpeg" alt="kid's wear">
+                <h3  class="product-name">Kurti Sharara Set</h3>
+                <p class="product-price">₹800</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+            <div class="fashion-card" data-category="Girls Dresses" data-price="450">
+                <img src="kid-products/product35.jpeg" alt="kid's wear">
+                <h3  class="product-name">Sleeveless Printed Dress</h3>
+                <p class="product-price">₹450</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+            <div class="fashion-card" data-category="Boys Night-Suits" data-price="399">
+                <img src="kid-products/product36.jpeg" alt="kid's wear">
+                <h3  class="product-name">Printed Shirt & Shorts Night Suit</h3>
+                <p class="product-price">₹399</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+            <div class="fashion-card" data-category="Girls Tops" data-price="479">
+                <img src="kid-products/product37.jpeg" alt="kid's wear">
+                <h3  class="product-name">White & Black Stripped Top</h3>
+                <p class="product-price">₹479</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Boys Co-ords" data-price="650">
+                <img src="kid-products/product38.jpeg" alt="kid's wear">
+                <h3  class="product-name">Blue & White Co-ords Set</h3>
+                <p class="product-price">₹650</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Jumpsuits" data-price="799">
+                <img src="kid-products/product39.jpeg" alt="kid's wear">
+                <h3  class="product-name">Yellow Printed Jumpsuit</h3>
+                <p class="product-price">₹799</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Boys Shirts" data-price="399">
+                <img src="kid-products/product40.jpeg" alt="kid's wear">
+                <h3  class="product-name">Green Full-Sleeves T-shirt</h3>
+                <p class="product-price">₹399</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Boys Shirts" data-price="559">
+                <img src="kid-products/product41.jpeg" alt="kid's wear">
+                <h3  class="product-name">Blue Checked Shirt</h3>
+                <p class="product-price">₹559</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="999">
+                <img src="kid-products/product42.jpeg" alt="kid's wear">
+                <h3  class="product-name">Sleeveless Printed Dress Combo Set</h3>
+                <p class="product-price">₹999</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="759">
+                <img src="kid-products/product43.jpeg" alt="kid's wear">
+                <h3  class="product-name">White & Pink Gown</h3>
+                <p class="product-price">₹759</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="995">
+                <img src="kid-products/fashion-product10.jpg" alt="kid's wear">
+                <h3  class="product-name">Bell Sleeves Dress</h3>
+                <p class="product-price">₹995</p>
+                <i class='bx  bx-heart wishlist-icon'></i>  
+            </div>
+            <div class="fashion-card" data-category="Girls Night-Suits" data-price="379">
+                <img src="kid-products/product44.jpeg" alt="kid's wear">
+                <h3  class="product-name">Pink Night Suit</h3>
+                <p class="product-price">₹379</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="450">
+                <img src="kid-products/product45.jpeg" alt="kid's wear">
+                <h3  class="product-name">Printed Dress</h3>
+                <p class="product-price">₹450</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="559">
+                <img src="kid-products/product46.jpeg" alt="kid's wear">
+                <h3  class="product-name">Sleeveless Green Dress</h3>
+                <p class="product-price">₹559</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Girls Night-Suits" data-price="499">
+                <img src="kid-products/product47.jpeg" alt="kid's wear">
+                <h3  class="product-name">Black & brown Co-ords Set</h3>
+                <p class="product-price">₹499</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="480">
+                <img src="kid-products/product48.jpeg" alt="kid's wear">
+                <h3  class="product-name">Collared Blue Midi-Dress</h3>
+                <p class="product-price">₹480</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Girls Ethnic" data-price="599">
+                <img src="kid-products/product49.jpeg" alt="kid's wear">
+                <h3  class="product-name">Ethnic Kurta Set</h3>
+                <p class="product-price">₹599</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="299">
+                <img src="kid-products/product50.jpeg" alt="kid's wear">
+                <h3  class="product-name">Floral printed Green Midi-Dress</h3>
+                <p class="product-price">₹299</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="549">
+                <img src="kid-products/product51.jpeg" alt="kid's wear">
+                <h3  class="product-name">White Puffed Sleeves Dress</h3>
+                <p class="product-price">₹549</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="699">
+                <img src="kid-products/product52.jpeg" alt="kid's wear">
+                <h3  class="product-name">Pink Net Gown</h3>
+                <p class="product-price">₹699</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Girls Sweater" data-price="680">
+                <img src="kid-products/product53.jpeg" alt="kid's wear">
+                <h3  class="product-name">White Sweater</h3>
+                <p class="product-price">₹680</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Girls Ethnic" data-price="599">
+                <img src="kid-products/product54.jpeg" alt="kid's wear">
+                <h3  class="product-name">Red Ethnic Kurta Set</h3>
+                <p class="product-price">₹599</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="559">
+                <img src="kid-products/product55.jpeg" alt="kid's wear">
+                <h3  class="product-name">Purple Gown</h3>
+                <p class="product-price">₹559</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="259">
+                <img src="kid-products/product56.jpeg" alt="kid's wear">
+                <h3  class="product-name">Purple Full-Sleeves Mini-Dress</h3>
+                <p class="product-price">₹259</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="299">
+                <img src="kid-products/product57.jpeg" alt="kid's wear">
+                <h3  class="product-name">Full-Sleeves Mini-Dress</h3>
+                <p class="product-price">₹299</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Boys Jumpsuits" data-price="599">
+                <img src="kid-products/product58.jpeg" alt="kid's wear">
+                <h3  class="product-name">Maroon Jumpsuit</h3>
+                <p class="product-price">₹599</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Boys Co-ords" data-price="439">
+                <img src="kid-products/product59.jpeg" alt="kid's wear">
+                <h3  class="product-name">Winter Co-ords Set</h3>
+                <p class="product-price">₹439</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Boys Shirts" data-price="350">
+                <img src="kid-products/product60.jpeg" alt="kid's wear">
+                <h3  class="product-name">Red Printed T-shirt</h3>
+                <p class="product-price">₹350</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Boys Night-Suits" data-price="299">
+                <img src="kid-products/product61.jpeg" alt="kid's wear">
+                <h3  class="product-name">Printed Night Suit</h3>
+                <p class="product-price">₹299</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Boys Ethnic" data-price="799">
+                <img src="kid-products/product62.jpeg" alt="kid's wear">
+                <h3  class="product-name">Pink Printed Kurta & Dhoti Pants</h3>
+                <p class="product-price">₹799</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Boys Jumpsuits" data-price="450">
+                <img src="kid-products/product63.jpeg" alt="kid's wear">
+                <h3  class="product-name">Grey Jumpsuit</h3>
+                <p class="product-price">₹450</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Boys Co-ords" data-price="469">
+                <img src="kid-products/product64.jpeg" alt="kid's wear">
+                <h3  class="product-name">Green Co-ords Set</h3>
+                <p class="product-price">₹469</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Boys Jumpsuits" data-price="580">
+                <img src="kid-products/product65.jpeg" alt="kid's wear">
+                <h3  class="product-name">Brown Jumpsuit</h3>
+                <p class="product-price">₹580</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Boys Shirts" data-price="599">
+                <img src="kid-products/product66.jpeg" alt="kid's wear">
+                <h3  class="product-name">Black T-shirt</h3>
+                <p class="product-price">₹599</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Boys Jumpsuits" data-price="625">
+                <img src="kid-products/product67.jpeg" alt="kid's wear">
+                <h3  class="product-name">White Jumpsuit</h3>
+                <p class="product-price">₹625</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Boys Sweater" data-price="438">
+                <img src="kid-products/product68.jpeg" alt="kid's wear">
+                <h3  class="product-name">Green Sweater</h3>
+                <p class="product-price">₹438</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Boys Sweater" data-price="680">
+                <img src="kid-products/product69.jpeg" alt="kid's wear">
+                <h3  class="product-name">White & Black Stripped cardigan</h3>
+                <p class="product-price">₹680</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Boys Shirts" data-price="480">
+                <img src="kid-products/product70.jpeg" alt="kid's wear">
+                <h3  class="product-name">Blue Shirt</h3>
+                <p class="product-price">₹480</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Boys Shirts" data-price="999">
+                <img src="kid-products/product71.jpeg" alt="kid's wear">
+                <h3  class="product-name">Grey Blazer</h3>
+                <p class="product-price">₹999</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Boys Jumpsuits" data-price="439">
+                <img src="kid-products/product72.jpeg" alt="kid's wear">
+                <h3  class="product-name">Blue Denim Jumpsuit</h3>
+                <p class="product-price">₹439</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Girls Dresses" data-price="1199">
+                <img src="kid-products/product73.jpeg" alt="kid's wear">
+                <h3  class="product-name">Multicolor Gown</h3>
+                <p>₹1199</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Girls Ethnic" data-price="1099">
+                <img src="kid-products/product74.jpeg" alt="kid's wear">
+                <h3  class="product-name">Pink Lehnga</h3>
+                <p class="product-price">₹1099</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+            <div class="fashion-card" data-category="Girls Jumpsuits" data-price="550">
+                <img src="kid-products/product75.jpeg" alt="kid's wear">
+                <h3  class="product-name">Blue printed Jumpsuit</h3>
+                <p class="product-price">₹550</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+            <div class="fashion-card" data-category="Girls Night-Suits" data-price="489">
+                <img src="kid-products/product76.jpeg" alt="kid's wear">
+                <h3 class="product-name">White Printed Night Suit</h3>
+                <p class="product-price">₹489</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+            <div class="fashion-card" data-category="Girls Night-Suits" data-price="489">
+                <img src="kid-products/product77.jpeg" alt="kid's wear">
+                <h3  class="product-name">Blue Printed Night Suit</h3>
+                <p class="product-price">₹489</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+             <div class="fashion-card" data-category="Girls Night-Suits" data-price="489">
+                <img src="kid-products/product78.jpeg" alt="kid's wear">
+                <h3  class="product-name">Blue Printed Night Suit</h3>
+                <p class="product-price">₹489</p>
+                <i class='bx  bx-heart wishlist-icon'></i>
+            </div>
+            </div>
+            <footer class="footer">
+                <p>&copy; 2025 ShopWhirl. Built with ❤️ by Shweta Chandra</p>
+            </footer>
+
+              
+  <script src="kids.js" defer></script>
+  <script src="wishlist.js"></script>          
+</body>
+</html>

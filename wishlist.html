@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wishlist - ShopWhirl</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+  
+    rel="stylesheet">
+    </head>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<body>
+   <nav class="navbar">
+        <div class="nav-left">
+            <img src="logo.png" alt="ShopWhirl logo" class="nav-logo">
+        </div>
+    
+    <ul class="nav-links">
+        <li><a href="home.html" >Home</a></li>
+        <li><a href="beauty.html" >Beauty</a></li>
+        <li><a href="men.html" >Men</a></li>
+        <li><a href="women.html" >Women</a></li>
+        <li><a href="kids.html">Kids</a></li>
+         <li><a href="floors.html">Floors</a></li>
+         <li><a href="shops.html">Shops</a></li>
+    </ul>
+
+    <div class="nav-right">
+        <a href="profile.html"><i class='bx bx-user'></i></a>
+        <a href="wishlist.html"><i class='bx bxs-heart'></i></a>
+        <a href="cart.html"><i class='bx bxs-cart'></i></a>
+    </div>
+
+
+  </nav>
+  <h1 class="wishlist-heading">❤️ My Wishlist</h1>
+  <div class="wishlist-grid" id="wishlistContainer"></div>
+      <footer class="footer">
+        <p>&copy; 2025 ShopWhirl. Built with ❤️ by Shweta Chandra</p>
+      </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("wishlistContainer");
+  const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+  if (wishlist.length === 0) {
+    container.innerHTML = `<p class="empty-wishlist">Your wishlist is empty 😢</p>`;
+    return;
+  }
+
+  wishlist.forEach(product => {
+    const card = document.createElement("div");
+    card.classList.add("fashion-card");
+    card.innerHTML = `
+      <img src="${product.img}" alt="${product.name}">
+      <h3>${product.name}</h3>
+      <p>${product.price}</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    `;
+
+    const addToCartBtn = card.querySelector(".add-to-cart-btn");
+    addToCartBtn.addEventListener("click", () => {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      // Check by name + price (safe combo)
+      const alreadyInCart = cart.some(item => item.name === product.name && item.price === product.price);
+      if (!alreadyInCart) {
+        cart.push(product);
+        localStorage.setItem("cart", JSON.stringify(cart));
+      }
+
+      // Redirect
+      window.location.href = "cart.html";
+    });
+
+    container.appendChild(card);
+  });
+});
+
+  </script>
+
+</body>
+</html>
